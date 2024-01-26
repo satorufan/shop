@@ -1,0 +1,27 @@
+
+
+
+ Shop 셋팅 하기 
+ 
+ 1. github 에서 레파지토리를 zip으로 다운 => 압푹 풀고 => 브랜치이름제거(main)
+ 2. 작업폴더 (WorkSpace-STS4) - shop 을 저장함. 
+ 3. STS4 에서 import => general = > Project from folder or ~~
+ 4. JPA QueryDSL 의 QDomain 을 생성 
+ 	- 메뉴=> Windows => show view => other => gradle => gradle task (클릭) 
+ 	- Gradle Task => shop (확장) => build (확장) => build (클릭)
+ 	- shop (오른쪽 클릭) => Refresh
+ 	- shop (오른쪽 클릭) => properties => java build path (클릭) => source (클릭)
+ 		 ==> add folder => build => generator(체크)  => applily and close 
+ 	- shop/build/generated  <== 출력되면 성공 
+ 5.  shop/src/main/resources/application.properties 의 상품 업로드 폴더를 생성 
+ 	  - c:\shop\item    폴더 생성 
+
+ 6. 프로잭트(shop)  시작 
+ 7. http://localhost:9898 		http://localhost:9898/h2-console         local100 
+ 	- 회원가입 (계정 2개 생성) 
+ 	- 관리자 권한 부여 
+ 		update member 
+		set role = 'ADMIN'
+		where email = 'admin@aaa.com'  
+		
+8. 관리자 권한 으로 로그인후 상품 등록 
